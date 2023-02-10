@@ -1,5 +1,3 @@
-<style>H1{background:grey;}</style>
-<style>H2{color:green;}</style>
 
 **This repository is made by Marc Blomvliet (Aurai), and is for learning purpose only.** </br>
 </br> 
@@ -119,3 +117,6 @@ Check if the metric server is working: </br>
 </br>
 If you are interested you can extend the application with your snowflake database instead of a MongoDB. </br>
 The project is already prepared for this. </br>
+
+<style>H1{background:grey;}</style>
+<style>H2{color:green;}</style>
