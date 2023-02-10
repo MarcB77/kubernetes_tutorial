@@ -8,7 +8,7 @@ This application includes the following: </br>
 * Saves the raw user input data in your mongoDB database </br>
 * Saves the predictions in your mongoDB database </br></br>
 
-*The application uses my own pre-trained model (with the use of MLFlow), the model is not very accurate but this is not the purpose of this training to bother you with training your own model.* </br>
+*The application uses my own pre-trained model (with the use of MLFlow), the model is not very accurate but this is not the purpose of this training, neither to bother you with training your own model.* </br>
 
 Furthermore, you will be introduced to MongoDB to create your own FREE database. </br>
 Test your Docker image with Docker.</br>
