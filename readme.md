@@ -35,7 +35,7 @@ You should add your current IP Address, and then Build a Database. </br>
 ### 1.1.2
 Create a Free 'Shared' cluster, and leave it on the default settings. </br>
 You can add your own cluster name if you like. </br>
-<img align="left" src="images/mongoDB_step_2.png" width="750"/> 
+<img align="left" src="images/mongoDB_step_2.png" width="750"/> <br clear="left"/> </br>
 <img align="left" src="images/mongoDB_step_3.png" width="750"/> <br clear="left"/>
 
 ### 1.1.3
@@ -71,7 +71,7 @@ And execute the command. </br>
 
 I you got a response, then there should also be data inside your mongoDB Database now. </br>
 Go to your mongoDB and click 'Browse Collections', there should be two tables: Raw_input and Predictions. </br>
-<img align="left" src="images/mongoDB_step_5.png" width="750"/> 
+<img align="left" src="images/mongoDB_step_5.png" width="750"/> <br clear="left"/> </br>
 <img align="left" src="images/mongoDB_step_6.png" width="750"/> <br clear="left"/>
 
 # 3. Kubernetes - Minikube commands
