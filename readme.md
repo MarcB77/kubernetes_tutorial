@@ -23,9 +23,30 @@ After you created your kubernetes cluster, you will perform a stress/load test o
 *The pink sections (3.8, 3.9 and 3.10) are optional and just for information.* </br>
 
 # 1. Create your own MongoDB Database
+## 1.1 
+Make sure to create your own account on the mongoDB website: </br>
+https://account.mongodb.com/account/login?signedOut=true </br>
 
-## 1.1 Update the .env 
+### 1.1.1
+After you created your account and succesfully logged in. </br>
+You should add your current IP Address, and then Build a Database
+<img align="left" src="https://github.com/MarcB77/kubernetes_tutorial/blob/main/images/mongoDB_step_1.png" width="200"/> </br>
+
+### 1.1.2
+Create a Free 'Shared' cluster, and leave it on the default settings. </br>
+You can add your own cluster name if you like.
+<img align="left" src="https://github.com/MarcB77/kubernetes_tutorial/blob/main/images/mongoDB_step_2.png" width="200"/> 
+<img align="left" src="https://github.com/MarcB77/kubernetes_tutorial/blob/main/images/mongoDB_step_3.png" width="200"/> </br>
+
+### 1.1.3
+After you created your cluster. You are prompted to create a database user. </br>
+Create one with a username and password.
+<img align="left" src="https://github.com/MarcB77/kubernetes_tutorial/blob/main/images/mongoDB_step_4.png" width="200"/> </br>
+
+## 1.1.4 Update the .env 
 Update the file with your own credentials. </br>
+MONGODB_PASSWORD: Is the password that you created for your database user in step 1.1.3 </br>
+MONGODB_SHARED_CLUSTER_NAME: Is the name of your cluster (step 1.1.2), by default it is 'Cluster0'. </br>
 
 # 2. Docker commands
 
@@ -39,6 +60,19 @@ https://docs.docker.com/get-docker/ </br>
 *<span style="color: orange">-image-name-</span> = tutorial-classifier </br>*
 
 ***Make sure to be in the root folder API_kubernetes/fastAPI/***  </br>
+
+Go to http://0.0.0.0:8020/docs </br>
+<img align="left" src="https://github.com/MarcB77/kubernetes_tutorial/blob/main/images/Docker_step_1.png" width="200"/> </br>
+
+And test your API, Click on: POST /predict/  and select 'Try it out'</br>
+Paste two questions inside "string", and predict the similarity. </br>
+And execute the command. </br>
+<img align="left" src="https://github.com/MarcB77/kubernetes_tutorial/blob/main/images/fastAPI_step_1.png" width="200"/> </br>
+
+I you got a response, then there should also be data inside your mongoDB Database now. </br>
+Go to your mongoDB and click 'Browse Collections', there should be two tables: Raw_input and Predictions. </br>
+<img align="left" src="https://github.com/MarcB77/kubernetes_tutorial/blob/main/images/mongoDB_step_5.png" width="200"/> 
+<img align="left" src="https://github.com/MarcB77/kubernetes_tutorial/blob/main/images/mongoDB_step_6.png" width="200"/> </br>
 
 # 3. Kubernetes - Minikube commands
 *minikube is local Kubernetes, focusing on making it easy to learn and develop for Kubernetes.* </br>
@@ -74,6 +108,10 @@ Check if the metric server is working: </br>
 
 ## 3.6 Get the URL of the Load-balancer service, this is the post.request url to all pods
 > minikube service --all </br>
+
+If you add '/docs' to the url of the load-balancer, then you should get the fastAPI page. </br>
+Something like: http://127.0.0.1:49700/docs </br> 
+The port number will probably be different. </br>
 
 ## 3.7 Kubernetes Dashboard UI
 > minikube dashboard
