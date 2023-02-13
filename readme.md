@@ -186,4 +186,5 @@ The project is already prepared for this. </br>
 *In order to stop the minikube container, perform the following:* </br>
 > minikube stop
 
+</br></br>
 <style>H1{background:grey;}</style>
