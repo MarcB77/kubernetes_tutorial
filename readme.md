@@ -1,4 +1,4 @@
-
+# Introduction 
 **This repository is made by Marc Blomvliet (Aurai), and is for learning purpose only.** </br>
 </br> 
 In this tutorial you will learn how to create an Docker image of your fastAPI application. </br>
@@ -116,6 +116,9 @@ The port number will probably be different. </br>
 ## 3.7 Kubernetes Dashboard UI
 > minikube dashboard
 
+<img align="left" src="images/kubernetes_dashboard_1.png" width="750"/> <br clear="left"/>
+When the deployment just started, the cluster will use the max amount of pods in order to start-up. </br>
+Wait until the cluster is steady with one pod only, before you start the stress/load testing on the cluster (Step 4). </br>
 
 ## <span style="color: pink">3.8 Basic commands <span>
 > kubectl get pods</br>
@@ -152,9 +155,35 @@ The port number will probably be different. </br>
 
 ***Make sure to be in the root folder API_kubernetes***  </br>
 
+The Locust web interface will be started on: http://0.0.0.0:8089 </br>
+<img align="left" src="images/locust_web_ui_1.png" width="750"/> <br clear="left"/>
+Start with the following settings: </br>
+Number of users: 13 </br>
+Spawn rate: 1 second </br>
+Host: This is the URL from step 3.6 (after you performed: minikube service --all) </br>
+Host will probably be something similar like: http://127.0.0.1:49700 </br>
+
+Befor you start the swarming/load testing, go back to your kubernetes dashboard: Workloads -> Pods
+<img align="left" src="images/kubernetes_dashboard_2.png" width="750"/> <br clear="left"/>
+There is probably only one pod available. </br>
+
+Now start swarming/load testing the cluster! </br>
+Go back to your Kubernetes dashboard, and new pods will pop-up! </br>
+
+Click on one of the pod's name (in blue). </br>
+<img align="left" src="images/kubernetes_dashboard_3.png" width="750"/> <br clear="left"/>
 </br>
+And then click on 'view logs' in the right corner, to check whether the certain pod is being used to make predictions. </br>
+<img align="left" src="images/kubernetes_dashboard_4.png" width="750"/> <br clear="left"/>
+Go through the logs of a couple of pods, to check which pods are being used continuously (set: Auto-refresh -> every 1s). </br>
+
+If you want to stop the load test, go back to your locust web UI and click 'Stop'. </br>
+Your cluster will take around ~5 minutes to auto scale down to probably one pod. </br>
+
 If you are interested you can extend the application with your snowflake database instead of a MongoDB. </br>
 The project is already prepared for this. </br>
 
+*In order to stop the minikube container, perform the following:* </br>
+> minikube stop
+
 <style>H1{background:grey;}</style>
-<style>H2{color:green;}</style>

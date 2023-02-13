@@ -2,7 +2,7 @@ from locust import HttpUser, task, between
 import json
 
 class AppUser(HttpUser):
-    wait_time = between(0.1,2)
+    wait_time = between(0.1,1.5)
     
     @task
     def predict_page(self):
