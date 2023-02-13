@@ -124,7 +124,9 @@ Wait until the cluster is steady with one pod only, before you start the stress/
 > kubectl get pods</br>
 > kubectl get deployments</br>
 > kubectl get services</br>
-> kubectl get hpa // (Get the horizontal pod autoscalers (HPA))</br>
+> kubectl get hpa </br>
+
+// (Get the horizontal pod autoscalers (HPA))</br>
 
 > kubectl describe svc <span style="color: orange">-service name-</span> </br>
 
