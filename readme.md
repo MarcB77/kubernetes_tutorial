@@ -29,19 +29,19 @@ https://account.mongodb.com/account/login?signedOut=true </br>
 
 ### 1.1.1
 After you created your account and succesfully logged in. </br>
-You should add your current IP Address, and then Build a Database
-<img align="left" src="images/mongoDB_step_1.png" width="200"/> </br>
+You should add your current IP Address, and then Build a Database. </br>
+<img align="left" src="images/mongoDB_step_1.png" width="750"/> <br clear="left"/>
 
 ### 1.1.2
 Create a Free 'Shared' cluster, and leave it on the default settings. </br>
-You can add your own cluster name if you like.
-<img align="left" src="images/mongoDB_step_2.png" width="200"/> 
-<img align="left" src="images/mongoDB_step_3.png" width="200"/> </br>
+You can add your own cluster name if you like. </br>
+<img align="left" src="images/mongoDB_step_2.png" width="750"/> 
+<img align="left" src="images/mongoDB_step_3.png" width="750"/> <br clear="left"/>
 
 ### 1.1.3
 After you created your cluster. You are prompted to create a database user. </br>
-Create one with a username and password.
-<img align="left" src="images/mongoDB_step_4.png" width="200"/> </br>
+Create one with a username and password. </br>
+<img align="left" src="images/mongoDB_step_4.png" width="750"/> <br clear="left"/>
 
 ## 1.1.4 Update the .env 
 Update the file with your own credentials. </br>
@@ -62,17 +62,17 @@ https://docs.docker.com/get-docker/ </br>
 ***Make sure to be in the root folder API_kubernetes/fastAPI/***  </br>
 
 Go to http://0.0.0.0:8020/docs </br>
-<img align="left" src="images/Docker_step_1.png" width="200"/> </br>
+<img align="left" src="images/Docker_step_1.png" width="750"/> <br clear="left"/>
 
 And test your API, Click on: POST /predict/  and select 'Try it out'</br>
 Paste two questions inside "string", and predict the similarity. </br>
 And execute the command. </br>
-<img align="left" src="images/fastAPI_step_1.png" width="200"/> </br>
+<img align="left" src="images/fastAPI_step_1.png" width="750"/> <br clear="left"/>
 
 I you got a response, then there should also be data inside your mongoDB Database now. </br>
 Go to your mongoDB and click 'Browse Collections', there should be two tables: Raw_input and Predictions. </br>
-<img align="left" src="images/mongoDB_step_5.png" width="200"/> 
-<img align="left" src="images/mongoDB_step_6.png" width="200"/> </br>
+<img align="left" src="images/mongoDB_step_5.png" width="750"/> 
+<img align="left" src="images/mongoDB_step_6.png" width="750"/> <br clear="left"/>
 
 # 3. Kubernetes - Minikube commands
 *minikube is local Kubernetes, focusing on making it easy to learn and develop for Kubernetes.* </br>
