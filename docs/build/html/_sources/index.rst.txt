@@ -6,6 +6,21 @@
 Welcome to Kubernetes Tutorial's documentation!
 ===============================================
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   modules
+   main
+   utils
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+
 This repository is made by Marc Blomvliet (Aurai), and is for learning purpose only.
 
 In this tutorial you will learn how to create an Docker image of your fastAPI application.
@@ -27,18 +42,3 @@ Deployment
 Load balancer
 Auto scaler (Horizontal Pod Auto scaler)
 After you created your Kubernetes cluster, you will perform a stress/load test on your API and therefore on your Kubernetes cluster.
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-   modules
-   main
-   utils
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
