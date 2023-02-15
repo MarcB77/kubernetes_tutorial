@@ -1,4 +1,4 @@
-name: fastAPI and mflow model with Docker
+name: fastAPI & MLFlow model with Docker
 
 on:
   push:
