@@ -2,7 +2,7 @@ name: fastAPI and mflow model with Docker
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build:
