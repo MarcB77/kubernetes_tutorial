@@ -21,7 +21,7 @@ jobs:
       - name: Build & Push to Docker Hub
         uses: docker/build-push-action@v2
         with:
-          file: fastAPI/Dockerfile
+          context: ./fastAPI
           push: true
           tags: v1, latest
         
