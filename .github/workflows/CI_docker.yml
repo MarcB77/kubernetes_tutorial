@@ -21,6 +21,6 @@ jobs:
           image: kubernetes_tutorial/tutorial-classifier
           tags: v1, latest
           registry: docker.io
-          directory: fastAPI/Dockerfile
+          directory: fastAPI
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
