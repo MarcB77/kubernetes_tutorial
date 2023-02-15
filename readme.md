@@ -1,17 +1,17 @@
 # Introduction 
-**This repository is made by Marc Blomvliet (Aurai), and is for learning purpose only.** </br>
+**This repository is created by Marc Blomvliet (Aurai), which is solely intended for educational purposes.** </br>
 </br> 
 In this tutorial you will learn how to create an Docker image of your fastAPI application. </br>
-This application includes the following: </br>
-* Takes two questions as input</br>
+The following is included in this application: </br>
+* Accepts two questions as input</br>
 * Returns a prediction whether the two questions are similar or not similar</br>
 * Saves the raw user input data in your MongoDB database </br>
-* Saves the predictions in your MongoDB database </br></br>
+* Predictions are saved in your MongoDB database </br></br>
 
-*The application uses my own pre-trained model (with the use of MLFlow), the model is not very accurate but this is not the purpose of this training, neither to bother you with training your own model.* </br>
+*The application makes use of my own pre-trained model (with the use of MLFlow). The model is not very accurate but this is not the purpose of this training, neither to bother you with training your own model.* </br>
 
 Furthermore, you will be introduced to MongoDB to create your own FREE database. </br>
-Test your Docker image with Docker.</br>
+Test your Docker image locally with Docker.</br>
 Create a Kubernetes cluster with the same Docker image. </br>
 The Kubernetes cluster contains the following: </br>
 * Deployment </br>
@@ -22,6 +22,10 @@ After you created your Kubernetes cluster, you will perform a stress/load test o
 
 *The pink sections (3.8, 3.9 and 3.10) are optional and just for information.* </br>
 
+Documentation for Python modules is available at: </br>
+https://marc-aurai.github.io/kubernetes_tutorial/ </br>
+
+
 # 1. Create your own MongoDB Database
 ## 1.1 
 Make sure to create your own account on the MongoDB website: </br>
@@ -29,12 +33,12 @@ https://account.mongodb.com/account/login?signedOut=true </br>
 
 ### 1.1.1
 After you created your account and succesfully logged in. </br>
-You should add your current IP Address, and then Build a Database. </br>
+You should add your current IP Address, and afterwards Build a Database. </br>
 <img align="left" src="images/mongoDB_step_1.png" width="750"/> <br clear="left"/>
 
 ### 1.1.2
 Create a Free 'Shared' cluster, and leave it on the default settings. </br>
-You can add your own cluster name if you like. </br>
+If you would like, you can add your own cluster name. </br>
 <img align="left" src="images/mongoDB_step_2.png" width="750"/> <br clear="left"/> </br>
 <img align="left" src="images/mongoDB_step_3.png" width="750"/> <br clear="left"/>
 
